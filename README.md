@@ -6,21 +6,21 @@
 
 order
 
-  — controller
+— controller
 
-  — model
+— model
 
-  — service
+— service
 
-    — impl
+— impl
 
-    — interfaces
+— interfaces
 
-  — dao
+— dao
 
-    — impl
+— impl
 
-    — interfaces
+— interfaces
     
    
 分包结构结果僵化，业务代码会分散到各处，不集中。   
