@@ -17,9 +17,9 @@ order
       OrderDaoImpl
     interfaces
       OrderDao
-
-
-项目是对此类分包的一种解读
-
-   
+  model
+    Order
     
+   
+分包结构结果僵化，业务代码会分散到各处，不集中。   
+
