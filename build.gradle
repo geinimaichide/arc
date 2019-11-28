@@ -1,0 +1,20 @@
+buildscript {
+    repositories {
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+        classpath "gradle.plugin.com.avast.gradle:gradle-docker-compose-plugin:1"
+        classpath "org.owasp:dependency-check-gradle:5.2.1"
+        classpath "gradle.plugin.com.github.spotbugs:spotbugs-gradle-plugin:2.0.0"
+    }
+}
+subprojects{
+    dependencies {
+        compileOnly 'org.projectlombok:lombok:1.18.4'
+        annotationProcessor 'org.projectlombok:lombok:1.18.4'
+        testImplementation platform('org.junit:junit-bom:5.5.1')
+        testImplementation("org.junit.jupiter:junit-jupiter-api")
+        testImplementation('org.junit.jupiter:junit-jupiter-engine')
+        testImplementation('org.mockito:mockito-junit-jupiter:2.26.0')
+    }
+}

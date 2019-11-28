@@ -25,4 +25,12 @@ public class DoOrderService {
         doOrderDao.save(order);
     }
 
+
+    public void setDoOrderDao(DoOrderDao doOrderDao) {
+        this.doOrderDao = doOrderDao;
+    }
+
+    public void setProductDao(ProductDao productDao) {
+        this.productDao = productDao;
+    }
 }

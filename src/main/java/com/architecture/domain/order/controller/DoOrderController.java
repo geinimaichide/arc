@@ -6,16 +6,17 @@ import com.architecture.domain.order.service.DoOrderService;
 import com.architecture.three.product.dao.interfaces.ProductDao;
 import com.architecture.three.product.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/do/order")
 public class DoOrderController {
+
+    public DoOrderController(DoOrderService doOrderService) {
+        this.doOrderService = doOrderService;
+    }
 
     @Autowired
     private ProductDao productDao;
@@ -36,5 +37,10 @@ public class DoOrderController {
     @PostMapping("/1")
     public void save1(@RequestBody @Valid CreateOrderCommand command) {
         doOrderService.save(command);
+    }
+
+    @GetMapping
+    public void get(){
+
     }
 }

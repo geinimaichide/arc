@@ -40,4 +40,5 @@ public class Order {
     private static boolean isProduct(Product product) {
         return product == null;
     }
+    
 }
